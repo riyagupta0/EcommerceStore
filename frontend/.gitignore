@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 #mongoDb 
-.env
+../.env
