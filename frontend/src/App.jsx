@@ -7,9 +7,9 @@ function App() {
   return (
     <>
       <ToastContainer />
-      <Navigation  />
-      <main className="py-3 bg-[#282828]" >
-      <Outlet />
+      <Navigation />
+      <main className="py-3">
+        <Outlet />
       </main>
     </>
   );

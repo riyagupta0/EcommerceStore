@@ -31,7 +31,6 @@ const Register = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    
 
     if (password !== confirmPassword) {
       toast.error("Passwords do not match");
@@ -49,16 +48,13 @@ const Register = () => {
   };
 
   return (
-    <section className="pl-[10rem]  flex flex-row justify-between items-center w-full h-screen fixed m-0 p-0 bg-[#282828]">
+    <section className="pl-[10rem]  flex flex-row justify-between items-center w-full h-screen fixed m-0 p-0 ">
       <div className=" mt-[5rem]">
-        <h1 className="text-3xl font-semibold mb-4 text-white">Register Yourself!</h1>
+        <h1 className="text-3xl font-semibold mb-4 ">Register Yourself!</h1>
 
         <form onSubmit={submitHandler} className="container w-[40rem]">
           <div className="my-[2rem]">
-            <label
-              htmlFor="name"
-              className="block text-sm font-medium text-white"
-            >
+            <label htmlFor="name" className="block text-sm font-medium">
               Name
             </label>
             <input
@@ -71,10 +67,7 @@ const Register = () => {
             />
           </div>
           <div className="my-[2rem]">
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium text-white"
-            >
+            <label htmlFor="email" className="block text-sm font-medium ">
               Email Address
             </label>
             <input
@@ -87,10 +80,7 @@ const Register = () => {
             />
           </div>
           <div className="my-[2rem]">
-            <label
-              htmlFor="password"
-              className="block text-sm font-medium text-white"
-            >
+            <label htmlFor="password" className="block text-sm font-medium ">
               Password
             </label>
             <input
@@ -105,7 +95,7 @@ const Register = () => {
           <div className="my-[2rem]">
             <label
               htmlFor="confirmPassword"
-              className="block text-sm font-medium text-white"
+              className="block text-sm font-medium"
             >
               Confirm Password
             </label>
@@ -121,14 +111,14 @@ const Register = () => {
           <button
             disabled={isLoading}
             type="submit"
-            className="bg-pink-500 text-white px-4 py-2 rounded cursor-pointer my-[1rem]"
+            className="bg-pink-500  px-4 py-2 rounded cursor-pointer my-[1rem]"
           >
             {isLoading ? "Registering..." : "Register"}
           </button>
           {isLoading && <Loader />}
         </form>
         <div className="mt-4">
-          <p className="text-white">
+          <p>
             Already have an account?{" "}
             <Link
               to={redirect ? `/login?redirect=${redirect}` : "/login"}
@@ -139,11 +129,11 @@ const Register = () => {
           </p>
         </div>
       </div>
-      <div >
+      <div>
         <img
           src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80"
           alt=""
-          className="h-[100vh] w-[100%] object-cover xl:block md:block sm:hidden rounded"
+          className="h-[100rem] w-[100%] object-cover xl:block md:block sm:hidden rounded"
         />
       </div>
     </section>

@@ -51,13 +51,13 @@ const Profile = () => {
     setPassword("");
   };
   return (
-    <div className="container mx-auto p-2 mt-[5rem] bg-[#282828] h-full">
+    <div className="container mx-auto p-2 mt-[5rem]  h-full">
       <div className="flex flex-row justify-center align-center items-center md:flex md:space-x-4">
         <div className="md:w-1/3 ">
-          <h2 className="text-2xl font-semibold mb-4 text-white">Update Profile</h2>
+          <h2 className="text-2xl font-semibold mb-4 ">Update Profile</h2>
           <form onSubmit={submitHandler}>
             <div className="mb-4">
-              <label className="block text-white mb-2">Name</label>
+              <label className="block mb-2">Name</label>
               <input
                 type="text"
                 placeholder="Enter name"
@@ -68,7 +68,7 @@ const Profile = () => {
             </div>
 
             <div className="mb-4">
-              <label className="block text-white mb-2">Email Address</label>
+              <label className="block  mb-2">Email Address</label>
               <input
                 type="email"
                 placeholder="Enter email"
@@ -79,7 +79,7 @@ const Profile = () => {
             </div>
 
             <div className="mb-4">
-              <label className="block text-white mb-2">Password</label>
+              <label className="block mb-2">Password</label>
               <input
                 type="password"
                 placeholder="Enter password"
@@ -90,7 +90,7 @@ const Profile = () => {
             </div>
 
             <div className="mb-4">
-              <label className="block text-white mb-2">Confirm Password</label>
+              <label className="block mb-2">Confirm Password</label>
               <input
                 type="password"
                 placeholder="Confirm password"

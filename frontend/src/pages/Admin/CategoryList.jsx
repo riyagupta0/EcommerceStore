@@ -8,6 +8,7 @@ import {
 } from "../../redux/api/categoryApiSlice.js";
 import CategoryForm from "../../components/CategoryForm.jsx";
 import Modal from "../../components/Modal.jsx";
+import AdminMenu from "./AdminMenu.jsx";
 
 const CategoryList = () => {
   const { data: categories } = useFetchCategoriesQuery();
@@ -92,19 +93,30 @@ const CategoryList = () => {
   }
 
   return (
-    <div className="ml-[10rem] flex flex-col md-flex-row">
+    <div className="ml-[10rem] flex flex-col md-flex-row"
+    style={{
+      backgroundImage: 'url("")',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      minHeight: '100vh',
+    }}>
       {/* admin menu */}
+      <AdminMenu/>
       <div className="md:w-3/4 p-3">
-        <div className="h-12 text-2xl text-white">Manage Categories</div>
+        <div className="h-12 text-2xl font-bold">Manage Categories</div>
         <CategoryForm
           value={name}
           setValue={setName}
           handleSubmit={handleCreateCategory}
         />
         <br />
+
+        <h2 className="text-xl font-semibold">List of Categories</h2>
         <hr />
 
+        
         <div className="flex flex-wrap">
+          
           {categories?.map((category) => (
             <div key={category._id}>
               <button
